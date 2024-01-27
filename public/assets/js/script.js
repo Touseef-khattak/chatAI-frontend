@@ -11,7 +11,7 @@
       $('#header-nav').on('click', '.btn-close-search', function(e) {
         $('.search-popup').toggleClass('is-visible');
       });
-      
+
       $(".search-popup-trigger").on("click", function(b) {
           b.preventDefault();
           $(".search-popup").addClass("is-visible"),
@@ -64,7 +64,7 @@
           nextEl: ".swiper-arrow-prev",
           prevEl: ".swiper-arrow-next",
         },
-      });         
+      });
 
       var swiper = new Swiper(".product-swiper", {
         slidesPerView: 4,
@@ -83,7 +83,7 @@
             spaceBetween: 20,
           }
         },
-      });      
+      });
 
       var swiper = new Swiper(".product-watch-swiper", {
         slidesPerView: 4,
@@ -102,7 +102,7 @@
             spaceBetween: 20,
           }
         },
-      }); 
+      });
 
       var swiper = new Swiper(".testimonial-swiper", {
         loop: true,
@@ -110,8 +110,43 @@
           nextEl: ".swiper-arrow-prev",
           prevEl: ".swiper-arrow-next",
         },
-      }); 
+      });
 
     }); // End of a document ready
+
+    $(".chatbox-open").click(()=>{
+            $(".chatbox-popup, .chatbox-close").fadeIn();
+            $(".welcome_msg").fadeOut();
+            $(".chatbox-open").css('transition', '0.5s ease-out');
+            $(".chatbox-open").css('right', '20px');
+            $(".chatbox-open").css('bottom', '20px');
+        }
+    );
+    $(".welcome_msg").click(()=>{
+            $(".chatbox-popup, .chatbox-close").fadeIn();
+            $(".welcome_msg").fadeOut();
+            $(".chatbox-open").css('transition', '0.5s ease-out');
+            $(".chatbox-open").css('right', '20px');
+            $(".chatbox-open").css('bottom', '20px');
+        }
+    );
+    $(".chatbox-close").click(()=>$(".chatbox-popup, .chatbox-close").fadeOut());
+    $(".chatbox-maximize").click(()=>{
+            $(".chatbox-popup, .chatbox-open, .chatbox-close").fadeOut();
+            $(".chatbox-panel").fadeIn();
+            $(".chatbox-panel").css({
+                display: "flex"
+            });
+        }
+    );
+    $(".chatbox-minimize").click(()=>{
+            $(".chatbox-panel").fadeOut();
+            $(".chatbox-popup, .chatbox-open, .chatbox-close").fadeIn();
+        }
+    );
+    $(".chatbox-panel-close").click(()=>{
+            $(".chatbox-popup").fadeOut();
+        }
+    );
 
 })(jQuery);

@@ -923,6 +923,39 @@
             </div>
         </div>
     </div>
+    <button class="chatbox-open">
+        <img src="https://cableinternetusa.com/public/assets/images/chatbot/ChatBot.svg" alt="">
+    </button>
+    <section class="chatbox-popup">
+        <button class="btn chatbox-panel-close text-center">
+            <img src="https://cableinternetusa.com/public/assets/images/chatbot/closeButton.svg" alt="">
+        </button>
+        <div class="chat_icon">
+            <img src="https://cableinternetusa.com/public/assets/images/chatbot/ChatBot.svg" alt="">
+            <input type="hidden" value="UzZBIHKVoLAPY4xrryca7oEXJnq1RsHEspLhnQ6B" name="current_user" id="current_user">
+        </div>
+        <main class="chatbox-popup__main">
+            <div class="msg">
+                <p>Do you have any queries? write to us</p>
+            </div>
+            <div class="msg_box"></div>
+            <button class="btn" id="chat_arrow_icon" style="display: none"><i class="fas fa-arrow-down"></i></button>
+        </main>
+        <footer class="chatbox-popup__footer">
+            <div id="agent">
+                <form id="send_chat" action="javascript:send_message()" method="post">
+                    <aside style="flex:3">
+                        <input class="form-control chat_textbox" type="text" id="textarea_agent" name="message" placeholder="Type your message here..." autofocus="" required="">
+                    </aside>
+                    <aside style="flex:1;color:#888;text-align:center;">
+                        <button type="button" class="btn" id="send_msg">
+                            <img src="https://cableinternetusa.com/public/assets/images/chatbot/Send.svg" alt="">
+                        </button>
+                    </aside>
+                </form>
+            </div>
+        </footer>
+    </section>
     <script src="{{asset('assets/js/jquery-1.11.0.min.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
